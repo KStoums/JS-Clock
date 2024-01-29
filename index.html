@@ -6,31 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./assets/style.css" rel="stylesheet">
-    <title>JS</title>
+    <title>JS Clock</title>
 </head>
-<body onLoad="initClock()" style="background-color: gray;">
-    <header>
-        <div style="margin-top: 5%; text-align: center;">
-            <h1>Horloge Analogique</h1>
-        </div>
-    </header>
-    <main>
-        <div id="watch_circle">
-            <p id="one_hour">1</p>
-            <p id="two_hour">2</p>
-            <p id="three_hour">3</p>
-            <p id="four_hour">4</p>
-            <p id="five_hour">5</p>
-            <p id="six_hour">6</p>
-            <p id="seven_hour">7</p>
-            <p id="eight_hour">8</p>
-            <p id="nine_hour">9</p>
-            <p id="ten_hour">10</p>
-            <p id="eleven_hour">11</p>
-            <p id="twelve_hour">12</p>
-        </div>
-        <div id="watch_needle_point">
-            <div id="watch_needle_hour"></div>
+<body onLoad="updateTime()">
+    <main class="body">
+        <div class="clock">
+            <div class="wrap">
+                <div class="hour"></div>
+                <div class="minute"></div>
+                <div class="second"></div>
+                <div class="dot"></div>
+                <div class="sub-dot"></div>
+                <img src="assets/img/clock-time.png" class="clock-image">
+            </div>
         </div>
     </main>
 
