@@ -7,14 +7,10 @@ function updateTime() {
     let minute = date.getMinutes();
     let second = date.getSeconds();
 
-    let hourDegree = hour * 30;
-    let minuteDegree = minute * 6;
-    let secondDegree = second * 6;
-
     let needleToEdit = new Map([
-        ["hour", hourDegree],
-        ["minute", minuteDegree],
-        ["second", secondDegree],
+        ["hour", hour * 30],
+        ["minute", minute * 6],
+        ["second", second * 6],
     ]);
 
     needleToEdit.forEach((value, key) => {
