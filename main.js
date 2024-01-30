@@ -3,19 +3,19 @@ let alarm = "30/01/2024 at 3:00AM"
 setInterval(updateTime, 1000);
 
 function updateTime() {
-    let date = new Date();
-    let hour = (date.getHours() % 12);
-    let minute = date.getMinutes();
-    let second = date.getSeconds();
+    const date = new Date(),
+        hour = (date.getHours() % 12),
+        minute = date.getMinutes(),
+        second = date.getSeconds();
 
-    let needleToEdit = new Map([
-        ["hour", hour * 30],
-        ["minute", minute * 6],
-        ["second", second * 6],
-    ]);
+    const needleToEdit = {
+        "hour": hour * 30,
+        "minute": minute * 6,
+        "second": second * 6,
+    }
 
-    needleToEdit.forEach((value, key) => {
-        let element = document.querySelector("." + key);
+    Object.entries(needleToEdit).forEach(([key, value]) => {
+        const element = document.querySelector("." + key);
         element.setAttribute("style", "transform: rotate("+value+"deg)");
     });
 
